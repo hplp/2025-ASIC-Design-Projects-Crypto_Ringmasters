@@ -86,5 +86,25 @@ asic-ro-puf-28nm/
 
 ## Workflow of the Project:
 
+This project involves the design, simulation, and ASIC implementation of a 1-bit RO-PUF (Ring Oscillator-based Physical Unclonable Function). The objective is to demonstrate a lightweight hardware security primitive in a standard-cell based silicon design flow.
 
+Step 1: Behavioral Simulation
+
+- Simulated the Verilog design using Synopsys VCS for RTL simulation and DVE waveform viewer for functional verification.
+
+- Verified the toggling behavior of Ring Oscillators (ROs), the accuracy of the counter module, and the correctness of the comparator output.
+
+- Observed output bit variations based on subtle frequency differences between ROs, confirming the expected PUF behavior.
+
+<p align="middle">
+<img src="RTL Simulation_1.jpg">
+</p>
+
+<p align="middle">
+<img src="RTL Simulation_2.jpg">
+</p>
+Fig. 1. Behavioral RTL Simulation 
+
+<br>
+<br>
 
