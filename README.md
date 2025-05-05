@@ -97,11 +97,11 @@ Step 1: Behavioral Simulation
 - Observed output bit variations based on subtle frequency differences between ROs, confirming the expected PUF behavior.
 
 <p align="middle">
-<img src="RTL Simulation_1.jpg">
+<img src="doc/RTL Simulation_1.jpg">
 </p>
 
 <p align="middle">
-<img src="RTL Simulation_2.jpg">
+<img src="doc/RTL Simulation_2.jpg">
 </p>
 Fig. 1. Behavioral RTL Simulation 
 
