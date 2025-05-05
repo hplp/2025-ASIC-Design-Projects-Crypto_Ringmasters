@@ -72,9 +72,8 @@ asic-ro-puf-28nm/
 | Environment Setup            | Organize modules, and configure pin mapping                                    | Shafat & Rumali   |
 | RTL Design                   | Implemented ring oscillator, frequency counter, comparator, and FSM in synthesizable Verilog      | Shafat & Rumali           |
 | Functional Verification      | Develop testbenches and validate PUF bit generation using simulations                           | Shafat & Rumali            |
-| Synthesis & Optimization     | Run synthesis, apply constraints, and optimize logic                      |             |
-| Place & Route & DRC/LVS      | Use OpenROAD, Magic, and KLayout for layout and design checks                                   |             |
-| Post-Layout Simulation       | Extract parasitics, perform post-layout timing verification                                     |             |
+| Synthesis & Optimization     | Run synthesis, apply constraints, and optimize logic using Design Compiler                     |     Rumali        |
+| Place & Route & DRC/LVS      | Use ICC2 for layout and design checks                                   |             |              Rumali
 | Documentation & Signoff     | Write report, generate GDSII, summarize results                                                 | Both              |
 
 
