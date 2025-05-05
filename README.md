@@ -1,5 +1,3 @@
-# Project_Template
-
 ## Team Name: 
 Crypto_Ringmasters
 
@@ -8,49 +6,64 @@ Crypto_Ringmasters
 - Rumali Siddiqua
 
 ## Project Title:
-ASIC Implementation of a Ring Oscillator-Based PUF on TinyTapeout10
+ASIC Design and Implementation of a Ring Oscillator-Based Physical Unclonable Function (RO-PUF)
 
 ## Project Description:
-This proposal details the design, implementation, and verification of an ASIC-based Ring Oscillator
- Physical Unclonable Function (RO-PUF) using the TinyTapeout 10 digital flow and the Sky130 Process
- Design Kit (PDK). Building on our prior FPGA work, our design is implemented in synthesizable Verilog
- and integrated into the TT10. The goal is to generate a tapeout-ready GDSII file while ensuring high
- entropy and reliable security metrics through rigorous RTL simulation, synthesis, place-and-route, and
- post-layout verification.
+This project presents the complete ASIC flow for designing a Ring Oscillator-based Physical Unclonable Function (RO-PUF) using a 28nm CMOS process and the full Synopsys EDA toolchain. The goal is to leverage process variations in ring oscillators to generate unique and unclonable identifiers at the silicon level, validated through synthesis, physical implementation, and signoff verification flows.
+Our RO-PUF architecture includes:
+
+Ring Oscillators (ROs): Exploiting process variations to generate distinct delay paths.
+
+Frequency Counters: Measuring the oscillation frequency of paired ROs over a fixed time window.
+
+Comparator Module: Comparing the counts to generate a single PUF bit (1 or 0).
+
+Control FSM: Sequencing operations, start/stop control, and output bit storage.
+
+
 
 ## Key Objectives:
-- Develop a synthesizable RO-PUF design featuring Ring Oscillator Module, Frequency Counter, Comparator and Control Logic, Control FSM.
+- Develop a synthesizable RO-PUF design featuring Ring Oscillator Module, Frequency Counter, Comparator, Control Logic, and Control FSM.
 
-- Integrate the design into the TinyTapeout 10 flow by adapting the TT10 Verilog template
- and updating configuration files for correct pin mappings and design parameters.
+- Perform complete ASIC implementation using Synopsys tools.
  
-- Perform comprehensive verification: Execute pre-synthesis simulation, synthesis using Yosys
- (with the Sky130 PDK), place-and-route via OpenROAD, DRC/LVS with Magic/KLayout, and
- post-layout timing simulations with parasitic extraction.
+- Generate a GDSII file that is ready for fabrication.
 
 ## Technology Stack:
-RTL Development & Simulation: Verilog, Icarus Verilog/Verilator, GTKWave.
+RTL Development & Simulation: Verilog, Synopsys VCS, GTKWave.
 
-Synthesis: Yosys with the Sky130 PDK.
+Synthesis: Synopsys Design Compiler.
 
-Place & Route: OpenROAD.
+Place & Route: Synopsys IC Compiler II (ICC2).
 
-Layout Verification: Magic and/or KLayout.
+Layout Verification: Synopsys IC Validator.
+
+STA & Power Analysis:	Synopsys PrimeTime
 
 Version Control and Documentation: Git and LaTeX.
 
 ## Expected Outcomes:
-- A fully verified ASIC RO-PUF design integrated within the TinyTapeout 10 flow.
-- Detailed simulation, synthesis, and timing reports that validate design performance and security
+- A fully verified ASIC RO-PUF design integrated within the Synopsys ASIC design flow in process node of 28nm CMOS. 
+- Detailed simulation, synthesis, and timing reports that validate design performance and security.
+
+## Project Directory Structure:
+asic-ro-puf-28nm/
+├── src/                   # Verilog RTL (RO, Counter, FSM, Comparator)
+├── sim/                   # VCS simulation scripts and testbenches
+├── synth/                 # DC synthesis scripts, .ddc, and reports
+├── pnr/                   # ICC2 setup: floorplan, CTS, placement, routing
+├── reports/               # Timing, area, and power summaries
+├── gds/                   # Final GDSII output and layout screenshots
+└── README.md              # Project summary and instructions
 
 ## Tasks:
 
 | Task                         | Description                                                                                      | Assigned To       |
 |------------------------------|--------------------------------------------------------------------------------------------------|-------------------|
-| Environment Setup            | Clone TT10 repo, organize modules, and configure pin mapping                                    | Shafat & Rumali   |
+| Environment Setup            | Organize modules, and configure pin mapping                                    | Shafat & Rumali   |
 | RTL Design                   | Implemented ring oscillator, frequency counter, comparator, and FSM in synthesizable Verilog      | Shafat & Rumali           |
 | Functional Verification      | Develop testbenches and validate PUF bit generation using simulations                           | Shafat & Rumali            |
-| Synthesis & Optimization     | Run Yosys synthesis with Sky130 PDK, apply constraints, and optimize logic                      |             |
+| Synthesis & Optimization     | Run synthesis, apply constraints, and optimize logic                      |             |
 | Place & Route & DRC/LVS      | Use OpenROAD, Magic, and KLayout for layout and design checks                                   |             |
 | Post-Layout Simulation       | Extract parasitics, perform post-layout timing verification                                     |             |
 | Documentation & Signoff     | Write report, generate GDSII, summarize results                                                 | Both              |
