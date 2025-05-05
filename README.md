@@ -84,3 +84,7 @@ asic-ro-puf-28nm/
 | Place & Route and Layout Verification | Week 3  |
 | Post-Layout Simulation and Final Signoff | Week 4  |
 
+## Workflow of the Project:
+
+
+
