@@ -47,14 +47,23 @@ Version Control and Documentation: Git and LaTeX.
 - Detailed simulation, synthesis, and timing reports that validate design performance and security.
 
 ## Project Directory Structure:
+
 asic-ro-puf-28nm/
-├── src/                   # Verilog RTL (RO, Counter, FSM, Comparator)
-├── sim/                   # VCS simulation scripts and testbenches
-├── synth/                 # DC synthesis scripts, .ddc, and reports
-├── pnr/                   # ICC2 setup: floorplan, CTS, placement, routing
-├── reports/               # Timing, area, and power summaries
-├── gds/                   # Final GDSII output and layout screenshots
-└── README.md              # Project summary and instructions
+
+├── src/         Verilog RTL files (RO, Counter, FSM, Comparator)
+
+├── sim/         VCS simulation scripts and testbenches
+
+├── synth/       Design Compiler scripts, .ddc netlist, and reports
+
+├── pnr/         ICC2 setup: floorplan, placement, CTS, routing
+
+├── reports/     Area, timing, and power summary reports
+
+├── gds/         Final GDSII layout files and screenshots
+
+└── README.md    Project overview and usage instructions
+
 
 ## Tasks:
 
