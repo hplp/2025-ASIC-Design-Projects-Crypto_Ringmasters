@@ -58,8 +58,6 @@ asic-ro-puf-28nm/
 
 ├── pnr/         ICC2 setup: floorplan, placement, CTS, routing
 
-├── reports/     Area, timing, and power summary reports
-
 ├── gds/         Final GDSII layout files and screenshots
 
 └── README.md    Project overview and usage instructions
