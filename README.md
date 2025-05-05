@@ -46,23 +46,6 @@ Version Control and Documentation: Git and LaTeX.
 - A fully verified ASIC RO-PUF design integrated within the Synopsys ASIC design flow in process node of 28nm CMOS. 
 - Detailed simulation, synthesis, and timing reports that validate design performance and security.
 
-## Project Directory Structure:
-
-asic-ro-puf-28nm/
-
-├── src/         Verilog RTL files (RO, Counter, FSM, Comparator)
-
-├── sim/         VCS simulation scripts and testbenches
-
-├── synth/       Design Compiler scripts, .ddc netlist, and reports
-
-├── pnr/         ICC2 setup: floorplan, placement, CTS, routing
-
-├── gds/         Final GDSII layout files and screenshots
-
-└── README.md    Project overview and usage instructions
-
-
 ## Tasks:
 
 | Task                         | Description                                                                                      | Assigned To       |
@@ -83,6 +66,22 @@ asic-ro-puf-28nm/
 | Synthesis and Early Optimization      | Week 2  |
 | Place & Route and Layout Verification | Week 3  |
 | Post-Layout Simulation and Final Signoff | Week 4  |
+
+## Project Directory Structure:
+
+asic-ro-puf-28nm/
+
+├── src/         Verilog RTL files (RO, Counter, FSM, Comparator)
+
+├── sim/         VCS simulation scripts and testbenches
+
+├── synth/       Design Compiler scripts, .ddc netlist, and reports
+
+├── pnr/         ICC2 setup: floorplan, placement, CTS, routing
+
+├── gds/         Final GDSII layout files and screenshots
+
+└── README.md    Project overview and usage instructions
 
 ## Workflow of the Project:
 
@@ -108,3 +107,8 @@ Fig. 1. Behavioral RTL Simulation
 <br>
 <br>
 
+Step 2: Synthesis
+
+- Synthesized the design using Synopsys Design Compiler, targeting a standard-cell library.
+
+- Performed area, timing, and power analysis on the synthesized netlist to ensure design constraints were met.
