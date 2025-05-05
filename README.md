@@ -36,6 +36,8 @@ Synthesis: Synopsys Design Compiler.
 
 Place & Route: Synopsys IC Compiler II (ICC2).
 
+Formal Verification: Synopsys Formality.
+
 Layout Verification: Synopsys IC Validator.
 
 STA & Power Analysis:	Synopsys PrimeTime
@@ -78,6 +80,8 @@ asic-ro-puf-28nm/
 ├── synth/       Design Compiler scripts, .ddc netlist, and reports
 
 ├── pnr/         ICC2 setup: floorplan, placement, CTS, routing
+
+├── formal_ver/  Pre-layout and Post-layout verification     
 
 ├── gds/         Final GDSII layout files and screenshots
 
